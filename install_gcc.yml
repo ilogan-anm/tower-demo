@@ -4,5 +4,6 @@
   become: yes
   tasks:
   - name: install gcc
-    yum: gcc
-
+    yum: 
+      name: gcc
+      state: present
