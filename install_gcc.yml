@@ -1,0 +1,8 @@
+---
+- hosts: all
+  name: Install GCC and friends
+  become: yes
+  tasks:
+  - name: install gcc
+    yum: gcc
+
