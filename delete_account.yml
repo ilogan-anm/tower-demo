@@ -1,0 +1,10 @@
+---
+- hosts: all
+  name: Delete account
+  become: yes
+  tasks:
+  - name: Delete user
+    user:
+      name: "{{ user_name }}"
+      state: absent
+
