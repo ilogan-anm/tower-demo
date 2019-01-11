@@ -5,8 +5,8 @@
   tasks:
   - name: Create user
     user:
-      name: {{ user_name }}
-      shell: {{ user_shell }}
+      name: "{{ user_name }}"
+      shell: "{{ user_shell }}"
       state: present
-#      generate_ssh_key: {{ user_ssh_bool }}
+#      generate_ssh_key: "{{ user_ssh_bool }}"
 
