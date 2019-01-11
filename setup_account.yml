@@ -7,6 +7,7 @@
     user:
       name: "{{ user_name }}"
       shell: "{{ user_shell }}"
+      password: "{{ user_password }}"
       state: present
 #      generate_ssh_key: "{{ user_ssh_bool }}"
 
