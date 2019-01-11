@@ -1,0 +1,12 @@
+---
+- hosts: all
+  name: Setup new system account
+  become: yes
+  tasks:
+  - name: Create user
+    user:
+      name: {{ user_name }}
+      shell: {{ user_shell }}
+      state: present
+#      generate_ssh_key: {{ user_ssh_bool }}
+
