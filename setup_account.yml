@@ -7,7 +7,7 @@
     user:
       name: "{{ user_name }}"
       shell: "{{ user_shell }}"
-      password: "{{ user_password }}"
+      password: "{{ user_password | password_hash('sha512', 65534 | random(seed=inventory_hostname) | string) }}"
       state: present
 #      generate_ssh_key: "{{ user_ssh_bool }}"
 
